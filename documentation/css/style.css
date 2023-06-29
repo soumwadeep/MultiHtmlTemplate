@@ -1,0 +1,603 @@
+﻿/*
+Author: Erilisdesign
+Author URI: https://themeforest.net/user/Erlisdesign
+Version: 1.0
+License: https://themeforest.net/licenses/standard
+*/
+
+/*------------------------------------------------------------------
+[1. Global Styles]
+*/
+body {
+	position: relative;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	white-space: normal;
+	min-height: 100vh;
+}
+
+.main-container {
+	clear: both;
+}
+
+.container,
+.container-fluid {
+	position: relative;
+}
+
+section {
+	position: relative;
+	padding-top: 5.625rem;
+	padding-bottom: 5.625rem;
+}
+
+.site-footer {
+	position: relative;
+	padding-top: 5.625rem;
+	padding-bottom: 5.625rem;
+}
+
+.csstransitions .animated,
+.animated {
+    visibility: hidden;
+}
+
+.csstransitions .visible {
+    visibility: visible;
+}
+
+audio, canvas, progress, video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+video {
+	max-width: 100%;
+}
+
+img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+}
+
+iframe {
+    display: block;
+	width: 100%;
+	border: 0;
+	overflow: hidden;
+}
+
+hr {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	border-color: #e7e7e7;
+}
+
+/*------------------------------------------------------------------
+[2. Typography]
+*/
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: 1.75rem;
+	color: #272727;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	position: relative;
+	margin-top: 0;
+	margin-bottom: 1rem;
+	font-family: inherit;
+	color: inherit;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	color: inherit;
+}
+
+h1, .h1 {
+	font-size: 2.5rem;
+	font-weight: 300;
+	line-height: 3.75rem;
+}
+
+h2, .h2 {
+	font-size: 2rem;
+	font-weight: 300;
+	line-height: 3rem;
+}
+
+h3, .h3 {
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 2.25rem;
+}
+
+h4, .h4 {
+	font-size: 1.25rem;
+	font-weight: 400;
+	line-height: 1.875rem;
+}
+
+h5, .h5 {
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.875rem;
+}
+
+h6, .h6 {
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1.875rem;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+p.lead {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.875;
+}
+
+a {
+	cursor: pointer;
+	color: #054cff;
+	text-decoration: none;
+	transition: all .3s ease;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+	outline: 0;
+	color: #054cff;
+}
+
+a, button {
+	outline: none;
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: 700;
+}
+
+address, blockquote, dd, dl, fieldset, form, ol, p, pre, table, ul {
+	margin-bottom: 1rem;
+}
+
+pre {
+	margin: 0;
+	padding: 9.5px;
+	color: #333;
+	background-color: #f7f7f7;
+	border: 1px solid #e8e8e8;
+	border-radius: 0px;
+	text-align: left;
+}
+
+input,
+select,
+textarea { 
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 400;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+h1:last-child, .h1:last-child,
+h2:last-child, .h2:last-child,
+h3:last-child, .h3:last-child,
+h4:last-child, .h4:last-child,
+h5:last-child, .h5:last-child,
+h6:last-child, .h6:last-child,
+p:last-child,
+ul:last-child,
+ol:last-child,
+pre:last-child,
+table:last-child,
+blockquote:last-child {
+	margin-bottom: 0;
+}
+
+/*------------------------------------------------------------------
+[3. Header]
+*/
+.site-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9000;
+	
+}
+
+@media (min-width: 992px) {
+	.site-header .navbar {
+		padding: .5rem calc(1rem + 15px);
+	}
+}
+
+/*------------------------------------------------------------------
+[4. Sidebar]
+*/
+.ed-sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	padding: 0;
+	border-right: 1px solid rgba(0,0,0,.09);
+	z-index: 9999;
+	background: #fff;
+	box-shadow: 0 0 27px rgba(0,0,0,0.09);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.ed-sidebar > * {
+	width: 100%;
+}
+
+.ed-sidebar .ed-header {
+    position: relative;
+    padding: calc(1rem + 15px) 1rem;
+}
+
+.ed-sidebar .ed-header:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: -15px;
+	right: 1rem;
+	border-bottom: 1px solid rgba(0,0,0,.09);
+}
+
+.ed-sidebar .header-brand {
+	color: #272727;
+	font-size: 1.3125rem;
+}
+
+.ed-sidebar .ed-footer {
+	position: relative;
+	padding: calc(1rem + 15px) 1rem;
+	margin-top: auto;
+	margin-bottom: 0;
+}
+
+.ed-sidebar .ed-footer:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -15px;
+	right: 1rem;
+	border-bottom: 1px solid rgba(0,0,0,.09);
+}
+
+.ed-sidebar .ed-links {
+	position: relative;
+	padding: calc(1rem + 15px) 1rem;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.ed-dn-item {
+	margin-top: .5rem;
+}
+
+.ed-dn-item:first-child {
+	margin-top: 0;
+}
+
+.ed-dn-item .ed-dn-link {
+	display: block;
+	color: #353739;
+	font-size: 1.125rem;
+	position: relative;
+}
+
+.ed-dn-item.active .ed-dn-link {
+	color: #054cff;
+}
+
+.ed-dn-item a {
+	color: #555759;
+}
+
+.ed-sidenav {
+	padding-left: 1rem;
+}
+
+.ed-sidenav > li:first-child {
+	padding-top: .5rem;
+}
+
+.scroll-progress {
+	display: none;
+	position: absolute;
+	width: 1px;
+	top: 0;
+	bottom: 0;
+	right: -1px;
+}
+
+.scroll-progress .progress {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transition: height .3s linear;
+	background-color: #007bff;
+	height: 0;
+}
+
+@media(min-width:1200px){
+	.scroll-progress {
+		display: block;
+	}
+}
+
+/*------------------------------------------------------------------
+[5. Documentation groups]
+*/
+.ed-content {
+	min-height: 100vh;
+}
+
+.ed-d-group {
+	display: none;
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity .3s linear, transform .3s linear;
+}
+
+.ed-d-group.active {
+	display: block;
+}
+
+.ed-d-group.show {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.ed-d-group section:not(:last-child):before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 15px;
+	right: 15px;
+	border-bottom: 1px solid rgba(0,0,0,.09);
+}
+
+/* Changelog */
+.changelog-item {
+	border: 1px solid rgba(0,0,0,.09);
+	padding: 30px 40px;
+	margin-bottom: 50px;
+	position: relative;
+	border-radius: .25rem;
+}
+
+.changelog-item:last-child {
+	margin-bottom: 0;
+}
+
+.changelog-header {
+	border-bottom: 1px solid rgba(0,0,0,.09);
+	padding-bottom: 15px;
+	margin-bottom: 1.5rem;
+}
+
+.changelog-type {
+	border-left: 2px solid rgba(0,0,0,.09);
+	display: table;
+	padding-left: 1rem;
+	padding-bottom: 3rem;
+	line-height: 1;
+}
+
+.changelog-type.feature {
+	border-left-color: #98C74E;
+	color: #98C74E;
+}
+
+.changelog-type.improvement {
+	border-left-color: #4AA3BA;
+	color: #4AA3BA;
+}
+
+.changelog-type.fixed {
+	border-left-color: #DA5C53;
+	color: #DA5C53;
+}
+
+.changelog-item ul {
+	list-style: disc;
+}
+
+/*------------------------------------------------------------------
+[6. Theme utilities]
+*/
+.theme-typography {
+	font-size: 16px;
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: .875rem;
+	font-weight: normal;
+	line-height: 1.75rem;
+}
+
+.theme-typography h1, .theme-typography .h1,
+.theme-typography h2, .theme-typography .h2,
+.theme-typography h3, .theme-typography .h3,
+.theme-typography h4, .theme-typography .h4,
+.theme-typography h5, .theme-typography .h5,
+.theme-typography h6, .theme-typography .h6 {
+	position: relative;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: 'Source Sans Pro', Helvetica, sans-serif;
+	color: inherit;
+}
+
+.theme-typography h1 a,
+.theme-typography h2 a,
+.theme-typography h3 a,
+.theme-typography h4 a,
+.theme-typography h5 a,
+.theme-typography h6 a {
+	color: inherit;
+}
+
+.theme-typography h1, .theme-typography .h1 {
+	font-size: 3rem;
+	font-weight: 600;
+	line-height: 3.75rem;
+}
+
+.theme-typography h2, .theme-typography .h2 {
+	font-size: 2rem;
+	font-weight: 600;
+	line-height: 3rem;
+}
+
+.theme-typography h3, .theme-typography .h3 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 2.25rem;
+}
+
+.theme-typography h4, .theme-typography .h4 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	line-height: 1.875rem;
+}
+
+.theme-typography h5, .theme-typography .h5 {
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1.875rem;
+}
+
+.theme-typography h6, .theme-typography .h6 {
+	font-size: 0.875rem;
+	font-weight: 600;
+	line-height: 1.875rem;
+}
+
+/* Heading Uppercase */
+.theme-typography .heading-uppercase {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.theme-typography h1.heading-uppercase,
+.theme-typography .h1.heading-uppercase {
+	letter-spacing: 4px;
+	margin-right: -4px;
+}
+
+.theme-typography h2.heading-uppercase,
+.theme-typography .h2.heading-uppercase {
+	letter-spacing: 4px;
+	margin-right: -4px;
+}
+
+.theme-typography h3.heading-uppercase,
+.theme-typography .h3.heading-uppercase {
+	letter-spacing: 4px;
+	margin-right: -4px;
+}
+
+.theme-typography h4.heading-uppercase,
+.theme-typography .h4.heading-uppercase {
+	letter-spacing: 4px;
+	margin-right: -4px;
+}
+
+.theme-typography h5.heading-uppercase,
+.theme-typography .h5.heading-uppercase {
+	font-weight: 700;
+	letter-spacing: 2px;
+	margin-right: -2px;
+}
+
+.theme-typography h6.heading-uppercase,
+.theme-typography .h6.heading-uppercase {
+	font-weight: 700;
+	letter-spacing: 2px;
+	margin-right: -2px;
+}
+
+.theme-typography p {
+	margin-bottom: 1rem;
+}
+
+.theme-typography p.lead {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.875;
+}
+
+/*------------------------------------------------------------------
+[7. Responsive utilities]
+*/
+@media (min-width: 576px) {
+	.container-sm-fluid {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 768px) {
+	.container-md-fluid {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 992px) {
+	.container-lg-fluid {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container-xl-fluid {
+		width: 100%;
+		max-width: 100%;
+	}
+}
